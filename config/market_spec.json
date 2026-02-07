@@ -1,0 +1,29 @@
+{
+  "market_id": "MKT_001_ETH_WALLET_TXCOUNT_10M_V1",
+  "chain": "ethereum_mainnet",
+  "wallet": {
+    "address": "0x28C6c06298d514Db089934071355E5743bf21d60", 
+    "label": "Whale_A"
+  },
+  "event": {
+    "name": "TX_COUNT_GE_2",
+    "definition": "count(success tx where from=wallet and block_time in [t0,t1)) >= 2",
+    "count_internal_tx": false,
+    "count_token_transfers": false,
+    "include_pending": false
+  },
+  "window": {
+    "length_seconds": 600,
+    "timezone": "UTC",
+    "interval": "[t0,t1)"
+  },
+  "settlement": {
+    "delay_seconds": 30,
+    "finality": "data_source_return",
+    "evidence": "tx_hashes"
+  },
+  "data_source": {
+    "primary": "etherscan_api",
+    "fallback": "rpc_receipts"
+  }
+}
