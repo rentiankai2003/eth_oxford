@@ -64,7 +64,7 @@ class EtherscanFetcher:
 
         for p in range(page, page + max_pages):
             params = {
-                "chainid": self.chainid,          # ⭐ 必须：Etherscan V2
+                "chainid": 1,          # ⭐ 必须：Etherscan V2
                 "module": "account",
                 "action": "txlist",
                 "address": wallet,

@@ -1,3 +1,11 @@
+ How to run the code:
+ 
+ $env:ETHERSCAN_API_KEY="QM2BH9YXXJYKS4DGXZP7PECCEQ8E8YSN4W"
+>> echo $env:ETHERSCAN_API_KEY
+>> streamlit run streamlit_app.py
+
+Whole stucture when  fully accomplished:
+
 wallet-action-markets/
 │
 ├── README.md
@@ -37,3 +45,6 @@ wallet-action-markets/
 └── docs/
     ├── architecture.md
     └── decision_log.md
+
+
+
